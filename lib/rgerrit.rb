@@ -15,7 +15,7 @@ module RGerrit
     def initialize(base_uri, user, pass)
       @base_uri = base_uri
       @http_client = HTTPClient.new
-      @http_clinet.set_auth(base_uri, user, pass)
+      @http_client.set_auth(base_uri, user, pass)
     end
 
     def add_cert_store(dir_name)
