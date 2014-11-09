@@ -49,25 +49,25 @@ module RGerrit
     
   end
 
-  class Access < Endpoint
+  class Access < EndPoint
   end
 
-  class Accounts < Endpoint
+  class Accounts < EndPoint
   end
 
-  class Changes < Endpoint
+  class Changes < EndPoint
   end
 
-  class Config < Endpoint
+  class Config < EndPoint
   end
 
-  class Groups < Endpoint
+  class Groups < EndPoint
   end
 
-  class Plugins < Endpoint
+  class Plugins < EndPoint
   end
 
-  class Projects < Endpoint
+  class Projects < EndPoint
     def initialize(session)
       super(session, '/projects')
     end
@@ -77,7 +77,7 @@ module RGerrit
     end
   end
 
-  class Documentation < Endpoint
+  class Documentation < EndPoint
   end
   
 end
