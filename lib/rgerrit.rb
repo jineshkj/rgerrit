@@ -25,7 +25,7 @@ module RGerrit
 
     def fetch(suffix, args)
       uri = @base_uri + suffix
-      resp = @http_client.get(uri, args, {'Accept' = > 'application/json' })
+      resp = @http_client.get(uri, args, {'Accept' => 'application/json' })
       YAML.load(resp.body.sub(/^.*[^{]/,''))
     end
     
