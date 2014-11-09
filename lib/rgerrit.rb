@@ -24,7 +24,7 @@ module RGerrit
     end
 
     def fetch(suffix, args)
-      uri = @base_uri + suffix
+      uri = @base_uri + '/a' + suffix
       resp = @http_client.get(uri, args, {'Accept' => 'application/json' })
       YAML.load(resp.body.sub(/^.*[^{]/,''))
     end
@@ -69,7 +69,7 @@ module RGerrit
 
   class Projects < EndPoint
     def initialize(session)
-      super(session, '/projects')
+      super(session, '/projects/')
     end
     
     def list
